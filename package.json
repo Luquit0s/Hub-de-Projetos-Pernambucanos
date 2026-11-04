@@ -1,0 +1,26 @@
+{
+  "name": "hub-de-projetos-pernambucanos",
+  "version": "1.0.0",
+  "description": "“  Recife é um polo de excelência em ensino e pesquisa, abrigando universidades, institutos federais e centros de inovação de renome (UFPE, UPE, IFPE, CESAR School, etc.). Anualmente, milhares de pesquisas, teses, dissertações e projetos inovadores são desenvolvidos, muitos com enorme potencial de aplicação prática. \r No entanto, esse conhecimento permanece, em grande parte, restrito ao ambiente acadêmico. Gestores públicos e empresários locais não possuem um canal centralizado e de fácil acesso para descobrir o que está sendo produzido. Essa falha de comunicação representa uma imensa perda de oportunidade: a cidade busca soluções para problemas que a academia pode já estar resolvendo, e o mercado demanda inovações que poderiam nascer dessas pesquisas.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luquit0s/Hub-de-Projetos-Pernambucanos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Luquit0s/Hub-de-Projetos-Pernambucanos/issues"
+  },
+  "homepage": "https://github.com/Luquit0s/Hub-de-Projetos-Pernambucanos#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0"
+  }
+}
