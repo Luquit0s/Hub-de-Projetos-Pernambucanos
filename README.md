@@ -8,11 +8,28 @@ Este desafio visa solucionar a desconexão entre o conhecimento gerado nas unive
   Nós, integrantes da Capi+, decidimos assumir esse desafio por acreditar que esta problemática atualmente está precisando de mais visibilidade. Existem diversos projetos inovadores por todo Pernambuco, como por exemplo o EcoTuba — uma pesquisa que desenvolve sistemas de monitoramento de tubarões no estado, facilitando a identificação de suas localizações. Por conta dessa falta de visibilidade, consequentemente acaba sendo difícil os projetos serem desenvolvidos pela falta de investimento por parte das empresas.
 
 ## Requisitos
-Essa parada tem node.js eo express
-npm init -y
-npm install express cors dotenv
+Para instalar e rodar este projeto você precisa:
+
+- Node.js (Ambiente de execução para Javascript)
+- Git (Caso vá clonar o repositório pelo terminal)
+- NPM (Gerenciador de pacotes instalado junto com o Node)
 
 ## Como rodar o Servidor
-npm install
-npm start
+Caso tenha baixado o arquivo ZIP, extraia-o. Se preferir clonar via GitHub, abra o terminal e digite:
+
+```
+git clone <url-do-repositorio>
+```
+```
+cd Sistema-de-cadastramento-em-pontos-de-apoio-por-conta-das-chuvas
+```
+Instale as dependências do projeto (caso ainda não estejam instaladas):
+
+* npm install
+* npm start
+
 ## Linguagems Utilizadas
+* Javascript (Backend e Frontend)
+
+## Frameworks e Bibliotecas Utilizadas
+* Node.js (Ambiente de execução)
