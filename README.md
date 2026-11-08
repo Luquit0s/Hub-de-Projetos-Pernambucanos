@@ -21,7 +21,7 @@ Caso tenha baixado o arquivo ZIP, extraia-o. Se preferir clonar via GitHub, abra
 git clone <url-do-repositorio>
 ```
 ```
-cd Sistema-de-cadastramento-em-pontos-de-apoio-por-conta-das-chuvas
+cd Hub-de-Projetos-Pernambucanos
 ```
 Instale as dependências do projeto (caso ainda não estejam instaladas):
 
