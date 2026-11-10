@@ -33,3 +33,89 @@ Instale as dependências do projeto (caso ainda não estejam instaladas):
 
 ## Frameworks e Bibliotecas Utilizadas
 * Node.js (Ambiente de execução)
+
+<br>
+
+## SESSÃO BACK-END
+
+Esta seção contém o guia completo para configuração, instalação de dependências e execução do servidor **Back-end (Django / Python)** do projeto **Hub de Projetos Pernambucanos**.
+
+---
+
+## 1. Pré-requisitos
+
+- **Python 3.10+** instalado
+- **Git** (caso vá clonar o repositório)
+
+---
+
+## 2. Passo a Passo para Execução
+
+### Passo 1: Entrar na pasta do Back-end
+Toda a execução de comandos, configurações e servidor devem ser realizados estritamente dentro da pasta `back-end`:
+
+```bash
+cd back-end
+```
+
+### Passo 2: Criar e Ativar o Ambiente Virtual (`venv`)
+
+1. **Criar o ambiente isolado:**
+   ```bash
+   python -m venv venv
+   ```
+
+2. **Ativar o ambiente:**
+   - **Windows (PowerShell):**
+     ```powershell
+     .\venv\Scripts\Activate
+     ```
+   - **Windows (CMD):**
+     ```cmd
+     .\venv\Scripts\activate.bat
+     ```
+   - **Linux / macOS:**
+     ```bash
+     source venv/bin/activate
+     ```
+
+> **Nota:** Certifique-se de que o identificador `(venv)` está visível no seu terminal antes de prosseguir.
+
+### Passo 3: Instalar as Dependências
+
+Com o ambiente virtual ativado, instale os pacotes listados no `requirements.txt`:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### Passo 4: Configurar Variáveis de Ambiente (`.env`)
+
+Crie um arquivo `.env` dentro do diretório `back-end/` (no mesmo nível do `manage.py`) com o seguinte conteúdo:
+
+```env
+SECRET_KEY=sua-chave-secreta-aqui
+DEBUG=True
+```
+
+### Passo 5: Executar Migrações do Banco de Dados
+
+Para gerar e aplicar a estrutura das tabelas no banco de dados local (SQLite):
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+### Passo 6: Iniciar o Servidor
+
+Execute o comando para subir o servidor de desenvolvimento:
+
+```bash
+python manage.py runserver
+```
+
+O servidor estará acessível em: `http://127.0.0.1:8000/`
+
+---
+*Para encerrar a execução do servidor, pressione `CTRL + C` no terminal.*
