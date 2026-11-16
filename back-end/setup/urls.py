@@ -19,6 +19,7 @@ from django.urls import include, path
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
+from setup import views
 from projetos.views import ProjetoViewSet
 
 router = DefaultRouter()
@@ -26,6 +27,7 @@ router.register('projetos', ProjetoViewSet, basename='projeto')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ping', views.ping, name='ping'),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/', include(router.urls)),
