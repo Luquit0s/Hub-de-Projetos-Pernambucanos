@@ -119,3 +119,18 @@ O servidor estará acessível em: `http://127.0.0.1:8000/`
 
 ---
 *Para encerrar a execução do servidor, pressione `CTRL + C` no terminal.*
+
+## Endpoints da API
+
+Todas as rotas abaixo usam o prefixo `http://127.0.0.1:8000/api/`.
+
+- `POST auth/register/`: cria usuário.
+- `POST token/`: login e emissão dos tokens JWT.
+- `POST token/refresh/`: renova o access token.
+- `GET/PATCH/DELETE auth/me/`: consulta, edita ou exclui o usuário autenticado.
+- `POST auth/logout/`: invalida o refresh token enviado no campo `refresh`.
+- `GET/POST projetos/`: lista ou cria projetos do usuário autenticado.
+- `GET/PATCH/PUT/DELETE projetos/<id>/`: consulta, edita ou exclui um projeto próprio.
+
+O frontend deve enviar o access token no cabeçalho `Authorization: Bearer <token>`.
+As origens permitidas para CORS são configuradas por `CORS_ALLOWED_ORIGINS` no `.env`.
