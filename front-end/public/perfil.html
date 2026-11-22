@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<aside id="side"></aside>
+<main style="max-width:none">
+  <section class="painel">
+    <header><h2>Meus Projetos:</h2><span class="badge" id="badge"></span></header>
+    <div class="grade" id="grade"><p class="aviso">Carregando projetos…</p></div>
+  </section>
+</main>
+<script src="/js/app.js"></script>
+<script>
+const grade = document.getElementById('grade');
+(async () => {
+  try {
+    await montarSidebar('perfil');
+    const ps = await listarProjetos();
+    document.getElementById('badge').textContent = `${ps.length} ${ps.length === 1 ? 'Projeto Publicado' : 'Projetos Publicados'}`;
+    grade.innerHTML = ps.length ? ps.map(p => `
+      <a class="mini" href="/projeto.html?id=${p.id}">${capaHtml(p)}
+        <h3>${esc(p.titulo)}</h3><p>${esc(p.descricao.length > 110 ? p.descricao.slice(0, 110) + '…' : p.descricao)}</p>
+      </a>`).join('') : '<p class="aviso">Você ainda não publicou nenhum projeto.</p>';
+  } catch (e) {
+    grade.innerHTML = '<p class="aviso">Não foi possível carregar seus projetos. <button onclick="location.reload()">Tentar de novo</button></p>';
+  }
+})();
+</script>
+</body>
+</html>
